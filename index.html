@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en-uk" />
+	<meta name="robots" content="all" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta name="author" content="Infinite Kind" />
+	<meta name="keywords" content="moneydance, quicken, personal finance, budget, banking, bill payment, investments, money, mac, linux, windows, software, OFX" />
+	<meta name="description" content="Moneydance is a powerful yet easy to use personal finance app for Windows.  With online banking, online bill payment, investment management and budgeting, Moneydance provides all the features of Quicken plus benefits such as ease of use and no sunsetting of features." />
+	
+	      <meta name="apple-itunes-app" content="app-id=367748818, affiliate-data=partnerId=2003&tduid=2191121, app-argument=">
+		
+	
+		
+      
+<title>Moneydance - Personal Finance Manager for Windows | Infinite Kind</title>
+
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" href="global/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="global/css/yui-grid.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="global/css/global.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="global/css/video-js.css" media="screen" />
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="global/css/ie8.css" type="text/css" media="screen" />
+<![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="global/js/productFeatures.js"></script>
+<script type="text/javascript" src="global/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="global/js/faq.js"></script>
+<script type="text/javascript" src="global/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="static/js/video.js"></script>
+
+<!-- Email list placeholder fix for IE https://github.com/mathiasbynens/jquery-placeholder -->
+<script type="text/javascript" src="global/js/jquery.placeholder.js"></script>
+<script>
+	$(function() {
+		$('input, textarea').placeholder();
+	});
+</script>
+
+<!-- Fancybox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css@v=2.1.0.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js@v=2.1.0"></script>
+
+<!-- From moneydance.com -->
+  <script type="text/javascript">
+  var myWidth = 0, myHeight = 0, myScroll = 0; myScrollWidth = 0; myScrollHeight = 0;
+  function getScreenSize() {
+    if (self.innerHeight) { // Everyone but IE
+        myWidth = window.innerWidth;
+        myHeight = window.innerHeight;
+        myScroll = window.pageYOffset;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // IE6 Strict
+        myWidth = document.documentElement.clientWidth;
+        myHeight = document.documentElement.clientHeight;
+        myScroll = document.documentElement.scrollTop;
+    } else if (document.body) { // Other IE, such as IE7
+        myWidth = document.body.clientWidth;
+        myHeight = document.body.clientHeight;
+        myScroll = document.body.scrollTop;
+    }
+    if (window.innerHeight && window.scrollMaxY) {  
+        myScrollWidth = document.body.scrollWidth;
+        myScrollHeight = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight) { // All but Explorer Mac
+        myScrollWidth = document.body.scrollWidth;
+        myScrollHeight = document.body.scrollHeight;
+    } else { // Explorer Mac...would also work in Explorer 6 Strict, Mozilla and Safari
+        myScrollWidth = document.body.offsetWidth;
+        myScrollHeight = document.body.offsetHeight;
+    }
+  }
+
+  function hideNotification() {
+    var covershadow = document.getElementById('covershadow');
+    var dlnotification = document.getElementById('dlnotification');
+    covershadow.style.display = 'none';
+    dlnotification.style.visibility = 'hidden';
+  }
+
+  function showNotification()
+  {
+      var covershadow = document.getElementById('covershadow');
+      var dlnotification = document.getElementById('dlnotification');
+      
+   
+      // Make fullscreen thing really full screen, and show it
+      getScreenSize();
+      covershadow.style.height = myScrollHeight + 'px';
+      covershadow.style.display = 'block';
+      
+      // Position pop-up
+      dlnotification.style.left = ((myWidth - dlnotification.offsetWidth)/2) + 'px';
+      dlnotification.style.top = (((myHeight - dlnotification.offsetHeight) / 2) + myScroll) + 'px';
+      dlnotification.style.visibility = 'visible';  
+  }
+  
+  $(document).ready(function() {
+  	$("a.zoom_elements").fancybox({
+    		'autoScale' : true,
+    		'titlePosition' :	'inside',
+    		'openEffect'	:	'elastic',
+    		'closeEffect'	:	'fade',
+    		'openMethod'	:	'zoomIn',
+    		'closeMethod'	:	'zoomOut',
+    		'overlayShow'	:	true     		     		
+  	});
+
+/*    $('.scrollPage').click(function() {
+      var elementClicked = $(this).attr("href");
+      var destination = $(elementClicked).offset().top;
+      $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-20}, 500 );
+      return false;
+    });
+
+    $('.toplink').click(function() {
+      var elementClicked = $(this).attr("href");
+      var destination = $(elementClicked).offset().top;
+      $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-20}, 500 );
+      return false;
+    });*/
+  });
+  </script>
+
+
+<!-- no analytics on dev --><script type="text/javascript" src="static/js/yui-min.js"></script>
+
+<!-- tapstream javascript -->
+<script type="text/javascript">
+
+var _tsq = _tsq || [];
+_tsq.push(["setAccountName", "syncspace"]);
+_tsq.push(["fireHit", "javascript_tracker", []]);
+
+(function() {
+    function z(){
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = "async";
+        s.src = window.location.protocol + "//cdn.tapstream.com/static/js/tapstream.js";
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent)
+        window.attachEvent("onload", z);
+    else
+        window.addEventListener("load", z, false);
+})();
+
+</script>
+
+<!-- end tapstream javascript -->
+
+</head>
+
+<body>
+
+<style type="text/css">
+@media (max-width: 800px) {
+  a.purchase-button {
+    display: block;
+    text-align: center;
+  }
+}
+a.purchase-button {
+  background-color: #F58C00;
+  color: white;
+  xpadding: 4pt 8pt;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0px;
+  padding-top: auto;
+  padding-bottom: auto;
+  vertical-align: middle;
+  line-height: 47px;
+  align-content: center;
+}
+
+a.purchase-button:hover {
+    background-color: rgba(162, 162, 162, 1);
+}
+
+@media (min-width: 800px) {
+  a.purchase-button {
+    display: block;
+  }
+}
+  
+</style>
+
+
+
+
+
+
+<div class="yui3-g">
+ 
+ 	<div class="yui3-u-1" id="header">
+ 		
+ 		<div class="yui3-u-1-3 logo">
+ 
+ 			<a href="index.html"><img src="images/logo.gif" alt="Infinite Kind" /></a>
+ 
+ 		</div>
+ 						
+ 		<div class="yui3-u-2-3 nav">
+ 		<!-- To add a new menu item, copy the code marked as copy and paste the 
+ 		code onto a new line, you can then edit any page names that have been set
+ 		with the page_name you have setup on your new page. the href link is a physical 
+ 		link to your new page so replace the filename to the name of your new page you 
+ 		created while retaining the .php on the end. Please also note to capitalise the
+ 		first letter of your menu item -->
+ 		
+ 		<!-- its also important to add a / before any link you add as this will link from the
+ 		website's root directory downwards, this is especially important if you create sub 
+ 		folders with pages in them as you may get broken links if the / is not in place -->
+ 			<ul>
+ 				
+ 				<!-- Copy from here-->
+ 				
+ 				<!--<li><a href="/index" >Home</a></li>-->
+ 	
+ 				<!-- end copy here -->	
+ 				<li><a href="Setup.exe" class="active">Download</a>
+	 			
+        </li>
+
+ 			
+ 			
+ 
+ 									
+ 			</ul>
+ 			
+ 		</div>
+ 		
+ 		
+ 		
+ 		<!--  Code Below is for your facebook and twitter buttons  -->
+ 
+<div id="social_media_links">
+		<div class="twitter-button"><a class="twitter-button" title="Follow @moneydance on Twitter" target="_blank" href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Finfinitekind.com%2Fmoneydance&amp;ref_src=twsrc%5Etfw&amp;region=follow_link&amp;screen_name=moneydance&amp;tw_p=followbutton" sl-processed="1">Follow</a></div>
+		<div class="facebook-button"><a class="facebook-button" title="Like Moneydance on Facebook" target="_blank" href="https://facebook.com/MoneydanceApp/like" sl-processed="1">Like</a></div>
+	</div>
+	 
+  	</div>
+ 	
+ 				
+ </div>
+ 
+<!-- Main Body HTMl Goes Below  -->
+
+<div class="yui3-u-1 top-area-bg">
+	<div class="yui3-u-1 top-area-bg_top">
+		<div class="yui3-u-1 top-area-bg_bottom">
+			<div id="product-area-top" class="moneydance">
+
+				<div id="app">
+					<img src="images/moneydance-app-icon.png" alt="Moneydance" /><br />
+					<ul>
+						<script type="text/javascript" >
+						<!--
+						platform = navigator.platform
+						userAgent = navigator.userAgent
+
+				baseURL = '/'
+				linuxFile = "moneydance_linux_amd64.deb"
+				macFile = "Moneydance.dmg"
+				winFile = "Setup.exe"
+				
+				dlPlatform = "unknown"
+
+
+				if(platform.indexOf("Win32")!=-1 || platform.indexOf("Windows;")!=-1 || userAgent.indexOf("Windows;")!=-1) {
+				  dlPlatform = "windows"
+				  if(platform.indexOf("Win64")!=-1 || userAgent.indexOf('WOW64')!=-1) {
+				    winFile = "Setup.exe"
+				  }
+				}  else if(platform.indexOf("Linux")!=-1) {
+				  dlPlatform = "linux"
+          if(userAgent.indexOf("Fedora")!=-1) {
+           	linuxFile = "moneydance_linux_amd64.rpm"
+          } else {
+           	linuxFile = "moneydance_linux_amd64.deb"
+          }
+				} else if(platform.indexOf("iPad")!=-1 || platform.indexOf("iPhone")!=-1 || platform.indexOf("iPod")!=-1 || platform.indexOf("iOS")!=-1) {
+				  dlPlatform = "ios"
+				} else if(userAgent.indexOf("Mac OS X")!=-1 || userAgent.indexOf("macOS")!=-1) {
+				  dlPlatform = "mac"
+				  if(userAgent.indexOf("Mac OS X 10_6_")>0 || userAgent.indexOf("Mac OS X 10_5_")>0 || userAgent.indexOf("Mac OS X 10_4_")>0 || userAgent.indexOf("Mac OS X 10_3_")>0) {
+	  				baseURL = 'https://infinitekind-md980.s3.amazonaws.com/'
+				    macFile = "presl/Moneydance.zip"
+				  }
+				} else if(userAgent.indexOf("MSIE 5.2")!=-1) {
+				  dlPlatform = "unknown"
+				} else if(platform.indexOf("Mac")!=-1) {
+				  dlPlatform = "mac"
+				}
+
+				winDLStr = '<li class="download winstore"><a onClick="ga(&apos;folder&apos;, &apos;event&apos;, &apos;downloads&apos;, &apos;downloaded&apos;, &apos;15Win-mdpage&apos;);" href="'+baseURL+winFile+'" title="Download Moneydance for Windows"></a></li>'
+				macDLStr = '<li class="download macstore"><a onClick="ga(&apos;folder&apos;, &apos;event&apos;, &apos;downloads&apos;, &apos;downloaded&apos;, &apos;15Mac-mdpage&apos;);" href="'+baseURL+macFile+'" title="Download Moneydance for Mac"></a></li>'
+				linuxDLStr = '<li class="download linux"><a onClick="ga(&apos;folder&apos;, &apos;event&apos;, &apos;downloads&apos;, &apos;downloaded&apos;, &apos;15Lin-mdpage&apos;);" href="'+baseURL+linuxFile+'" title="Download Moneydance for Linux"></a></li>'
+				appstoreDLStr = '<li class="download appstore"><a onClick="ga(&apos;folder&apos;, &apos;event&apos;, &apos;downloads&apos;, &apos;downloaded&apos;, &apos;iOS-mdpage&apos;);" href="https://infinitekind.com/moneydance-ios" title="Download Moneydance for iPhone or iPad"></a></li>'
+				otherDLStr = '<li class="download other"><a  title="Moneydance Moneydance for all Platforms"></a></li>'
+
+
+				if(dlPlatform=="linux") {
+				  document.write(linuxDLStr)
+				} else if(dlPlatform=="ios") {
+				  document.write(appstoreDLStr)
+				} else if(dlPlatform=="mac") {
+				  document.write(macDLStr)
+				} else if(dlPlatform=="windows") {
+				  document.write(winDLStr)
+				} else {
+				  document.write(macDLStr)
+				}
+				document.write(otherDLStr)
+
+				//-->
+						</script>
+				<noscript>
+        		  <li class="download macstore"><a onClick="ga('folder', 'event', 'downloads', 'downloaded', '15Mac-mdpage');" href="stabledl/current/Moneydance.dmg.html" title="Download Moneydance for macOS"></a></li>
+				  <li class="download other"><a  title="Download Moneydance for all Platforms"></a></li>
+				</noscript>
+<!-- 				  <li class="download purchase"><a onClick="ga('folder', 'event', 'purchase', 'click', 'mdpage');" href="/purchase2017">Purchase Moneydance</a></li>				 -->
+				  
+				  <li class="download" style="text-indent: 0px;"><a class="purchase-button" style="text-indent: 0px;" data-fsc-item-path-value="moneydance" data-fsc-action="Add, Checkout" href="Setup.exe">Downlaod</a></li>
+				  
+					</ul>
+
+				</div>
+
+				<!-- The below text is to be a short description of the product, please note there is 
+				enough room for 4 lines of text, after this it will be cut off to retain the look of the design.  -->
+
+				<div id="description">
+					 <p>Moneydance is easy to use personal finance software that is loaded with all the features you need: 
+						online banking and bill payment, account management, budgeting and investment tracking.</p>
+					 <p>
+						 Moneydance handles multiple currencies and virtually any financial task with ease.
+					</p>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--The code below is the product features area.  -->
+
+
+<div id="appsWrapper">
+
+<style>
+.features_white {
+width: 940px;
+margin: auto;
+margin-bottom: 2em;
+}
+.features_gray {
+min-height: inherit !important;
+}
+.features_white h2, .features_gray h2 {
+background: url("images/product_features_sprite.png") no-repeat;
+line-height: 2em;
+font-size: 22pt;
+padding-left: 60px;
+margin-top: 0.5em;
+}
+.features_white h2 {
+margin-top: 1.5em;
+}
+h2#onlineBanking {
+background-position: 0px -273px;
+}
+h2#summary {
+background-position: 0px -346px;
+}
+h2#graphing {
+        background-position: 0 -418px;
+}
+
+h2#checkRegister {
+        background-position: 0 -490px;
+}
+
+h2#reminders {
+        background-position: 0 -560px;
+}
+h2#mobile {
+        background-position: 0 -630px;
+}
+
+h2#investments {
+        background-position: 0 -708px;
+}
+div#md_bottom_buttons ul {
+text-align: center;
+}
+div#md_bottom_buttons li a {
+    display: block;
+    height: 47px;
+    text-indent: -9999px;
+}
+div#md_bottom_buttons li {
+    background: url("images/app-sprite.png") no-repeat scroll 0 0 transparent;
+	margin: 15px 14px;
+	list-style: none;
+	padding-bottom: 0px;
+	display: inline-block;
+	width: 140px;
+	height: 47px;
+	vertical-align: top;
+}
+div#md_bottom_buttons li.appstore {
+	background-position: 0px 0px;
+}
+
+div#md_bottom_buttons li.andriodstore {
+	background-position: 0px -47px;
+}
+
+div#md_bottom_buttons li.winstore {
+	background-position: 0px -94px;
+}
+
+div#md_bottom_buttons li.macstore{
+	background-position: 0px -141px;
+}
+
+div#md_bottom_buttons li.appstore{
+	background-position: 0px -188px;
+}
+
+div#md_bottom_buttons li.linux{
+	background-position: 0px -235px;
+}
+
+div#md_bottom_buttons li.other{
+	background-position: 0px -282px;
+}
+
+div#md_bottom_buttons li.purchase{
+	background: url('images/purchase.png.html');
+	width: 140px;
+}
+.features_left {
+/*float: left;*/
+display: inline-block;
+width: 30%;
+margin-right: 2em;
+margin-left: 62px;
+vertical-align: top;
+}
+.img_left {
+margin-right: 2em;
+margin-left: 62px;
+display: inline-block;
+margin-bottom: 4em;
+}
+.img_right {
+display: inline-block;
+margin-bottom: 4em;
+}
+.features_right {
+/*float: right;*/
+display: inline-block;
+width: 30%;
+/*margin-left: 2em;*/
+vertical-align: top;
+}
+.features_white h1 {
+font-size: 30pt;
+margin: 1em auto 1em 3em;
+}
+</style>
+<div class="features_white">
+
+<h1 style="font-size: 30pt; margin: 1em auto 1em 3em;">Features</h1>
+
+<h2 id="onlineBanking">Online Banking</h2>
+
+<div class="features_left moneydance">
+<p>Moneydance can automatically download transactions and folder payments online from hundreds of financial institutions. It learns how to automatically categorize and clean up downloaded transactions.</p>
+</div>
+
+<div class="img_right moneydance">
+<a class="zoom_elements" href="images/products/onlinebanking.png.html"><img src="images/products/onlinebanking_thumb.png" alt="Moneydance Online Banking" /></a>
+</div>
+
+</div>
+
+
+
+<div class="yui3-u-1 top-area-bg features_gray"><div class="yui3-u-1 top-area-bg_top"><div class="yui3-u-1 top-area-bg_bottom">
+
+<h2 id="summary">Summary</h2>
+
+<div class="img_left">
+<a class="zoom_elements" href="images/products/homepage.png.html"><img src="images/products/homepage_thumb.png" alt="Moneydance Homepage" /></a>
+</div>
+
+<div class="features_right moneydance">
+				<p>This is an overview of your finances. The information shown includes account balances, upcoming and overdue transactions and reminders, and exchange rate information. Clicking on an account or choosing an account from the drop-down account list will take you to the register for that account, where you can enter transactions or reconcile the account against a statement. Clicking on a transaction reminder will display a window where you can automatically record the transaction.</p>
+				</div>
+
+</div></div></div>
+
+
+
+<div class="features_white">
+
+<h2 id="graphing">Graphs &amp; Reports</h2>
+
+<div class="features_left moneydance">
+<p>Use the graphing tool to generate visual reports of your income and expenses. Set the graph type, the date range, and any specific settings for the type of graph you desire. Pop-up balloons display more information about the data being graphed as you move the mouse pointer over different regions of the screen. Graphs can also be printed or saved to PNG image files.</p>
+</div>
+
+<div class="img_right moneydance">
+<a class="zoom_elements" href="images/products/graph.png.html"><img src="images/products/graph_thumb.png" alt="Moneydance Graphs" /></a>
+</div>
+
+</div>
+
+
+
+<div class="yui3-u-1 top-area-bg features_gray"><div class="yui3-u-1 top-area-bg_top"><div class="yui3-u-1 top-area-bg_bottom">
+
+<h2 id="checkRegister">Account Registers</h2>
+
+<div class="img_left">
+<a class="zoom_elements" href="images/products/register.png.html"><img src="images/products/register_thumb.png" alt="Moneydance Register" /></a>
+</div>
+
+<div class="features_right moneydance">
+				<p>The account register is used to enter, edit, and delete transactions in an account. It is visually similar to a paper checkbook register, but the calculation of balances and sorting of transactions is all done automatically. The payee auto-complete feature makes it easier to enter and categorize your transactions.</p>
+				</div>
+
+</div></div></div>
+
+
+
+<div class="features_white">
+
+<h2 id="reminders">Reminders</h2>
+
+<div class="features_left moneydance">
+<p>You can set up a payment schedule for single or recurring transactions so you'll never miss a payment.</p>
+</div>
+
+<div class="img_right moneydance">
+<a class="zoom_elements" href="images/products/reminders.png.html"><img src="images/products/reminders_thumb.png" alt="Moneydance Reminders" /></a>
+</div>
+
+</div>
+
+
+
+<div class="yui3-u-1 top-area-bg features_gray"><div class="yui3-u-1 top-area-bg_top"><div class="yui3-u-1 top-area-bg_bottom">
+
+<h2 id="mobile">Mobile</h2>
+
+<div class="img_left">
+<a class="zoom_elements" href="images/products/mobile-md.png.html"><img src="images/products/mobile-md_thumb.png" alt="Moneydance iOS App" /></a>
+</div>
+
+<div class="features_right moneydance">
+				<p>When you're on the go, you can use the Moneydance mobile app to enter or edit transactions and view balances. Changes are synced instantly and securely with your desktop. Available for <a href="https://itunes.apple.com/us/app/moneydance/id367748818?mt=8">free in the app store</a> for your iPhone, iPad, and iPod touch.  Now also available for your Android device <a href="https://play.google.com/store/apps/details?id=com.infinitekind.MoneydanceAndroid">free on the Play Store</a>!</p>
+				</div>
+
+</div></div></div>
+
+
+
+<div class="features_white">
+
+<h2 id="investments">Investments</h2>
+
+<div class="features_left moneydance">
+<p>Follow your investments and bring your portfolio into focus with support for stocks, bonds, CDs, mutual funds, and more. View the total value of your investment accounts or the performance of individual stocks and mutual funds over time. Stock splits and cost basis computations are a snap, and current prices can be downloaded automatically.</p>
+</div>
+
+<div class="img_right moneydance">
+<a class="zoom_elements" href="images/products/investments.png"><img src="images/products/investments_thumb.png" alt="moneydance application" /></a>
+</div>
+
+<div id="md_bottom_buttons">
+
+<ul>
+						<script type="text/javascript" >
+						<!--
+						if(dlPlatform=="linux") {
+				  document.write(linuxDLStr)
+				} else if(dlPlatform=="ios") {
+				  document.write(appstoreDLStr)
+				} else if(dlPlatform=="mac") {
+				  document.write(macDLStr)
+				} else if(dlPlatform=="windows") {
+				  document.write(winDLStr)
+				} else {
+				  document.write(macDLStr)
+				}
+				document.write(otherDLStr)
+
+				//-->
+						</script>
+				<noscript>
+        		 
+				</noscript>
+                <li class="download" style="text-indent: 0px;"><a class="purchase-button" style="text-indent: 0px;" data-fsc-item-path-value="moneydance" data-fsc-action="Add, Checkout" href="Setup.exe">Downlaod</a></li>				  
+					</ul>
+
+				  
+					</ul>
+</div>
+
+<div style="width: 80%; margin: auto; text-align: center;">
+<p>We offer a <a >free trial</a> of Moneydance, which is fully functional but limited to entering up to 100 manually entered transactions.  We also have a <a >90 day money back guarantee</a> if you're not happy with Moneydance for any reason.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- The Below code includes the review section of the product page, to edit the reviews. please use includes/product_reviews.php  -->
+
+<div class="yui-g reviews">
+	
+	<div id="yui-g_reviews_top">
+		
+		<div id="yui-g_reviews_bottom">
+		
+		<h2>Reviews</h2>
+		
+		<!-- The review area has been setup in sets so that it slides 3 reviews a time, 
+		to add more reviews, either copy the review div and paste it in below the previous 
+		review or create a new slide set. the review set and the individual reviews have been marked "copy" for easy 
+		reference. once you have made a copy of the desired review or set, then you can edit the text to your needs.
+		
+		The star system has been created so that you can define how many stars each review has left. this ranges from 1 - 5, to edit
+		the start rating, simply replace the class "star4" with your desired stars. and you can use star1, star2, star3, star4 and star5.
+		
+		The last review in a set of 3 has a class of last, this is to remove the seperator from the right side of it, for every set of 3 
+		reviews the last review should have this class.  if you only have 2 reviews on one of the slide sets, then you can also add the 
+		class of last to the final slide to remove the seperator also. Sets of 3 reviews should to be used when reviews are available.-->
+		
+		<div id="review_slides">
+		
+<!-- Copy Set --><div id="reviews_set_1">
+<!-- Copy Review--><div class="user_review">
+					<h3>"Viable alternative to Quicken"</h3>
+					<p class="stars star4">4 Stars</p>
+					<p>"Moneydance is...fast, well-designed, regularly updated, 
+					and well supported, and which seems to have a very satisfied user base—superlatives 
+					not often used in conjunction with Quicken, the major player in the Macintosh personal finance market.
+					<br>&mdash; <a >Macworld review</a>
+					</p>
+				</div><!-- end of review -->
+
+				<div class="user_review">
+					<h3>"A much more solid contender"</h3>
+					<p>"Moneydance...is a much more solid contender. This program manages to replicate much of Quicken's 
+					functionality -- but in some cases a bit more elegantly...On a Windows PC with a moderately new processor 
+					it was strikingly fast."
+					<br>&mdash; <a >Washington Post</a> - 
+					<i>Challenging the Finance Software Giants</i>
+					</p>
+				</div>
+
+
+				<div class="user_review last">
+					<h3>"Boasts a robust set of features"</h3>
+					<p>"Moneydance includes features of big-name personal finance programs but with a greater focus on privacy.  ...with its multicurrency mechanism, Moneydance is particularly useful for customers dealing with multiple foreign accounts or cryptocurrency."
+					<br>&mdash; <a >CardRates.com</a>
+					</p>
+				</div>
+			</div>
+<!-- End of set -->
+			
+			<div id="reviews_set_2">
+				<div class="user_review">
+					<h3>"The one I'll be sticking with"</h3>
+					<p>"The online banking type of person will <i>love</i> Moneydance. It was the first one I reviewed, and 
+					it's the one I'll be sticking with... The functionality and usefulness of it is just awesome." 
+					<br>&mdash; <a >The Apple Blog</a>
+					</p>
+				</div>
+
+				<div class="user_review">
+					<h3>"Has a lot going for it"</h3>
+					<p>"Moneydance...has a lot going for it: Online banking and bill paying are as automatic 
+					as they can be, investment information can be imported easily, budgets can be made and tracked, 
+					checks can be written and printed, and the list goes on. To top it off, Moneydance has numerous 
+					extensions that bring even more functionality to bare, including stock price updaters, debt payoff 
+					calculators, and more."
+					<br>&mdash; <!--<a href="https://personal-finance-software-review.toptenreviews.com/moneydance-review.html">-->Top Ten Reviews<!--</a>-->
+					</p>
+				</div>
+
+				<div class="user_review last">
+					<h3>"Great, solid program"</h3>
+					<p>"I've been using Moneydance since release 2, maybe earlier. In any case, for the years that 
+					I've been using it, I've never lost data, I've never found ads in the program, runs faster and 
+					more reliably than Quicken, easy to understand, support has always been there and is even better 
+					now, with feature requests attended to almost on a same day basis. ...Great, solid program, 
+					performs as advertised, constantly improving."
+					<br>&mdash; Bob Crochelt, Alaska USA 
+					</p>
+				</div>
+			</div>
+			
+			<div id="reviews_set_3">
+				<div class="user_review">
+					<h3>"Really makes my life easier"</h3>
+					<p>"I have used Moneydance for over two years and I can't imagine handling our finances without it. 
+					The ability to look at our complete financial status in one window is awesome. Having reminders so 
+					that one never pays bills late is worth its price in gold...This app really makes my life easier 
+					by saving me time and stress, and when it comes to money, that's a very good thing. I highly recommend Moneydance."
+					<br>&mdash; Abdon G. 
+					</p>
+				</div>
+				<div class="user_review">
+					<h3>"Infinitely better"</h3>
+					<p>"This is a really great product. Its been completely stable and absolutely intuitive... Its by far the best Mac finance package I've seen and infinitely better than all of the recent product 
+					I've seen from Intuit and Microsoft on the PC side. Thanks so much for making it such a great program; you saved 
+					me in my migration from the PC to Mac!"
+					<br>&mdash; Mark Slater
+					</p>
+				</div>
+
+				<div class="user_review last">
+					<h3>"Graceful, simple interface"</h3>
+					<p>"Thank you for making a clean looking, simple interface to manage my finances and balance my checking account. 
+					Quicken has grown so bloated - Moneydance is the graceful, simple interface I fell in love with when Quicken first 
+					came out for DOS...Awesome work!"
+					<br>&mdash; Daniel Juarez
+					</p>
+				</div>
+
+<!--
+				<div class="user_review last">
+					<h3>"Very much the best"</h3>
+					<p>"I used Quicken since Day 1 and dropped it for Money when producing an annual "update" obviously became more 
+					important than debugging. Leaving WXP for OSX, I looked at several replacements for Money and your's is very much the best."
+					<br>&mdash; Ed Campbell, Santa Fe, NM USA
+					</p>
+				</div>
+-->
+
+			</div>
+		
+		</div>
+		<div class="clear"></div>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+<!-- End of Main Body HTML -->	
+<div id="footerWrapper">
+<div class="yui-g footer">
+
+	<div class="yui3-u-1-2 first">
+		
+		<span>© Copyright The Infinite Kind 2016</span>
+	</div>
+	
+	<div class="yui3-u-1-2 second">
+		<div id="newsletter_signup">
+			<form action="https://infinitekind.createfolder.com/t/r/s/xjrljt/" method="post" id="subForm">
+					<span><input type="text" class="email" placeholder="Your Email Address" name="cm-xjrljt-xjrljt" id="xjrljt-xjrljt" size="30" /></span><br/>
+					<span class="button"><input id="submit" type="submit" value="Subscribe" /> to our newsletter</span>
+			</form>
+		</div>
+	</div>	
+</div>
+</div>
+	
+<script>
+	var _gaq=[['_setAccount','UA-1281940-2'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+$('#review_slides')
+.before('<div id="review_slides_arrows"><div id="prev_reviews"></div><div id="next_reviews"></div></div>')
+.after('<div id="nav">') 
+.cycle({ 
+		fx: 'scrollHorz',
+		timeout: 0,
+		pager: '#nav',
+		prev: '#prev_reviews',
+		next: '#next_reviews'
+}); //]]>
+</script>
+
+<script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11l4I2']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src='https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+
+
+</body>
+</html>
